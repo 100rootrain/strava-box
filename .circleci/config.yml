@@ -25,6 +25,7 @@ jobs:
     <<: *defaults
     steps:
       - install
+      - run: touch strava-auth.json # 빈 파일 생성
       - restore_cache:
           keys:
             - strava-auth-{{ .Environment.CIRCLE_PREVIOUS_BUILD_NUM }}
