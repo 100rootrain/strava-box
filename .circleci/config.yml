@@ -25,11 +25,8 @@ jobs:
     <<: *defaults
     steps:
       - install
-- run: |
-          # 파일이 없거나 비어 있는 경우
+      - run: |
           if [ ! -s strava-auth.json ]; then
-            # Secret에 있는 STRAVA_REFRESH_TOKEN을 가진 유효한 JSON 객체를 생성
-            # 스크립트가 이 값을 읽어 Access Token을 갱신하도록 유도합니다.
             echo '{"stravaRefreshToken": "${STRAVA_REFRESH_TOKEN}"}' > strava-auth.json
           fi
       - restore_cache:
