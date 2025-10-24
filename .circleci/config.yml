@@ -27,7 +27,7 @@ jobs:
       - install
       - run: |
           if [ ! -s strava-auth.json ]; then
-            echo '{"stravaRefreshToken": "${STRAVA_REFRESH_TOKEN}"}' > strava-auth.json
+            echo "{\"stravaRefreshToken\": \"${STRAVA_REFRESH_TOKEN}\"}" > strava-auth.json
           fi
       - restore_cache:
           keys:
