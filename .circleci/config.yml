@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:20.10.0
+    - image: cimg/node:20.10.0
     #circleci/node:10
 
 commands:
