@@ -100,6 +100,9 @@ async function updateGist(data) {
     },
     Cycling: {
       key: "ytd_ride_totals"
+    },
+    Walking: {
+      key: "ytd_walk_totals"
     }
   };
 
